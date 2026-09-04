@@ -2624,7 +2624,7 @@ export default function AdminDashboard() {
               {sidebarOpen ? (
                 <div className="flex items-center space-x-3">
                   <Avatar className="h-8 w-8">
-                    <AvatarFallback className="bg-indigo-600 text-white">{user.name.charAt(0).toUpperCase()}</AvatarFallback>
+                    <AvatarFallback className="bg-indigo-600 text-white">{(user?.name || user?.username || 'Admin').charAt(0).toUpperCase()}</AvatarFallback>
                   </Avatar>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-gray-900 truncate capitalize">{user.name}</p>
@@ -2655,7 +2655,7 @@ export default function AdminDashboard() {
                 </div>
               ) : (
                 <Avatar className="h-8 w-8">
-                  <AvatarFallback className="bg-indigo-600 text-white">{user.name.charAt(0).toUpperCase()}</AvatarFallback>
+                  <AvatarFallback className="bg-indigo-600 text-white">{(user?.name || user?.username || 'Admin').charAt(0).toUpperCase()}</AvatarFallback>
                 </Avatar>
               )}
             </div>
@@ -2853,7 +2853,7 @@ export default function AdminDashboard() {
             <div className="p-4 border-t border-gray-200">
               <div className="flex items-center space-x-3">
                 <Avatar className="h-8 w-8">
-                  <AvatarFallback className="bg-indigo-600 text-white">{user.name.charAt(0).toUpperCase()}</AvatarFallback>
+                  <AvatarFallback className="bg-indigo-600 text-white">{(user?.name || user?.username || 'Admin').charAt(0).toUpperCase()}</AvatarFallback>
                 </Avatar>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-gray-900 truncate capitalize">{user.name}</p>
@@ -2915,7 +2915,7 @@ export default function AdminDashboard() {
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="flex items-center gap-2">
                     <Avatar className="h-8 w-8">
-                      <AvatarFallback className="bg-indigo-600 text-white">{user.name.charAt(0).toUpperCase()}</AvatarFallback>
+                      <AvatarFallback className="bg-indigo-600 text-white">{(user?.name || user?.username || 'Admin').charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
                     <span className="hidden md:inline-block font-medium capitalize">{user.name}</span>
                   </Button>
