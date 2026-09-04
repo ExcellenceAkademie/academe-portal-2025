@@ -1,9 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import jwt from 'jsonwebtoken';
 
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'admin';
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
+const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || 'admin';
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || 'admin123';
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
+
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
